@@ -22,9 +22,7 @@ import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import './AddProduct.css';
-// let ProductYup=yup.Schema(
 
-// )
 
 let productSchema = yup.object().shape({
     productName: yup.string("יכול להיות רק מחרוזת").required(" זהו שדה חובה"),
@@ -51,10 +49,7 @@ const UpdateItem = () => {
     let navigate = useNavigate();
     let user = useSelector(us => us.currentUser.currentUser);
     console.log(user)
-    // useEffect(() => {
-    //     if (user == null || user.role != "ADMIN")
-    //         navigate(-1)
-    // })
+   
 
     const onSubmit = async (details) => {
         console.log(details);

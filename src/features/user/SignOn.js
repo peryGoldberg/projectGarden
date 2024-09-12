@@ -6,11 +6,10 @@ import Swal from 'sweetalert2'
 import {userIn,userOut} from './UserSlice.js';
 
 import { useEffect, useState } from 'react';
-import { useLoaderData, useLocation, Link, useNavigate, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux'
-import { login, getAllUsers } from './UserApi.js';
+import { useDispatch } from 'react-redux'
+import {  getAllUsers } from './UserApi.js';
 
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { addUser } from './UserApi.js';
@@ -18,7 +17,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Box from '@mui/material/Box';
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import Alert from '@mui/material/Alert';
 import './SignOn.css'
 
@@ -39,7 +37,7 @@ console.log([...users])
     fetchData();
 }, []);
 
-    let dispatch=useDispatch()
+    let dispatch=useDispatch();
     const Swal = require('sweetalert2')
     const { control, register, handleSubmit, reset, formState: { dirtyFields, errors, isValid } } = useForm({
       mode: "all",
@@ -142,7 +140,7 @@ console.log([...users])
            
 
 </div>
-{/* <div>{errors}</div> */}
+
         </form>
         </div>
         </div>

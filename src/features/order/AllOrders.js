@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { getAllorders } from './OrderApi';
-import { getAllProduct } from '../product/ProductApi';
 import { useEffect,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 const AllOrders = () => {

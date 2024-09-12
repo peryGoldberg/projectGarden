@@ -1,34 +1,4 @@
-/* 
-.rashi{
-    display: flex;
 
-}
-.img-sign{
-    flex: 2;
-}
-/* .img-sign{
-    width: "3%";
-    height: "2px";
-     overflow: "hidden"
-}
-.img-sign img{
-   flex: 1;
-    opacity: 0.2;
-    margin-top: "-150px"
-} */
-/* .img-form{
-    flex: 5;
-}
-
-.form{
-    background-color: rgb(221, 218, 218);
-    /* background-image: url(https://www.ikea.com/ext/ingkadam/m/afe16d67cd3f0f2/original/PH191229-crop001.jpg?f=xl);
-    opacity: 1;
-    background-repeat: no-repeat;
-    background-size:cover;  */
-    /* padding: 4%;
- 
-} */
 
 .container {
     text-align: center;
@@ -43,9 +13,7 @@
     padding: 20px;
 }
 
-/* .form {
-    /* Your form styling */
-/* } */ 
+
 
 .image-container {
     flex: 1;
@@ -58,30 +26,4 @@
     max-height: 100%;
     object-fit: cover;
 }
-/* .rashi {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.img-sign {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.img-sign img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.img-form {
-    z-index: 1;
-} */

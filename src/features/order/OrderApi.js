@@ -1,6 +1,6 @@
 import axios from 'axios';
-let baseUrl="http://localhost:8000/api/"
-//https://projectnode-feg7.onrender.com
+let baseUrl="https://projectnode-feg7.onrender.com/api/"
+
 export const getAllorders = (token) => {
     return axios.get(`${baseUrl}order/`,{
         headers: {

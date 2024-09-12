@@ -1,22 +1,21 @@
 
-import { useEffect, useState } from 'react';
-import { useLoaderData, useLocation, Link, useNavigate, useParams } from "react-router-dom";
-import { userIn, userOut } from './UserSlice.js';
-import { useDispatch } from 'react-redux'
-import { login, getAllUsers } from './UserApi.js';
 
-import { useForm, Controller } from "react-hook-form";
+import {  useNavigate } from "react-router-dom";
+import { userIn } from './UserSlice.js';
+import { useDispatch } from 'react-redux'
+import { login} from './UserApi.js';
+
+import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 
-import { addUser } from './UserApi.js';
+
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
-import Box from '@mui/material/Box';
-import Swal from 'sweetalert2'
+
 import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
+
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Typography } from '@mui/material';
 let userSchema = yup.object().shape({
@@ -24,8 +23,7 @@ let userSchema = yup.object().shape({
     email: yup.string().required("מייל הוא שדה חובה").matches(/@gmail\.com$/, 'אימייל חייב להיות כתובת Gmail חוקית'),
     password: yup.string().required(" סיסמא היא שדה חובה").min(4, "חייב להיות מינימום 4").max(10, "חייב להיות מקסימום 10").matches(/^(?=.*[a-zA-Z].*[a-zA-Z])(?=.*[A-Z]).+$/, 'הסיסמא לא תקינה')
 });
-//.matches(/^[0-9]{1,}$/, "לא תואם את התבנית רק ספרות")
-// , defaultValues: { passport: "0000000" }
+
 
 
 const LogIn = () => {

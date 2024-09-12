@@ -1,7 +1,6 @@
 import axios from 'axios';
-let baseUrl="http://localhost:8000/api/"
+let baseUrl="https://projectnode-feg7.onrender.com/api/"
 
-//https://projectnode-feg7.onrender.com
 export const login = (login) => {
     return axios.post(`${baseUrl}user/login/`,login,{
         headers: {

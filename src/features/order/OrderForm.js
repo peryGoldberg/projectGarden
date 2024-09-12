@@ -14,7 +14,6 @@ import HttpsOutlinedIcon from '@mui/icons-material/HttpsOutlined';
 import PaymentOutlinedIcon from '@mui/icons-material/PaymentOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import TodayOutlinedIcon from '@mui/icons-material/TodayOutlined';
-import { Box } from '@mui/system';
 const OrderForm = () => {
     let minimalProduct = useSelector(myState => myState.product.shoppingProduct);
     
@@ -68,9 +67,9 @@ const OrderForm = () => {
             console.log(err);
             Swal.fire({
                 icon: "error",
-                title: "יש לך שגיאה, ההזמנה לא בוצעה",
+                title: "  ההזמנה לא בוצעה ",
                 showConfirmButton: false,
-                text: err.message,
+                text: "עליך להתחבר לאתר כדי להשלים את ההזמנה",
 
             })
         }
@@ -172,21 +171,21 @@ const OrderForm = () => {
                     <Button sx={{ width: '100%',margin:'1%' }} variant='contained' color='secondary' onClick={goToShop}> חזור לחנות </Button>
 
                 </form>
-                <div style={{ padding: '2% 7%', margin: '0% 1%', border: 'solid 1px #b39ddb', borderRadius: '5%' }}>
-                    <h3>סך הכל בעגלה</h3>
-                    <div style={{ direction: 'rtl', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridTemplateRows: 'repeat(4, 1fr)' }}>
-                        <div>
+                <div style={{fontFamily:'Ariel', padding: '1% 3%', margin: '0% 1%', border: 'solid 1px #b39ddb', borderRadius: '5%' }}>
+                    <Typography sx={{fontSize:'30px'}}>סך הכל בעגלה</Typography>
+                    <div style={{width:'100%', direction: 'rtl', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridTemplateRows: 'repeat(4, 1fr)' }}>
+                        <Typography>
                             {`  מספר המוצרים   `}
-                        </div>
-                        <div>
+                        </Typography>
+                        <Typography>
                             {`:    ${count()}`}
-                        </div>
-                        <div>
+                        </Typography>
+                        <Typography>
                             סכום 
-                        </div>
-                        <div>
+                        </Typography>
+                        <Typography>
                             {`${allsum()}.00 ₪ `}
-                        </div>
+                        </Typography>
 
                         
                         <div style={{

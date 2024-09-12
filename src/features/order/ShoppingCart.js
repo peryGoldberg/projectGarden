@@ -71,20 +71,20 @@ console.log(arr)
         </div>}
 
         <div style={{padding:'2% 7%',margin:'0% 1%', border:'solid 1px #b39ddb',borderRadius: '5%'}}>
-          <h3>סך הכל בעגלה</h3>
+          <Typography sx={{fontSize:'25px'}}>סך הכל בעגלה</Typography>
           <div style={{direction:'rtl', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridTemplateRows: 'repeat(4, 1fr)' }}>
-            <div>
+            <Typography>
               {`  מספר מוצרים בסל  `}
-            </div>
-            <div>
+            </Typography>
+            <Typography>
               {`:    ${count()}`}
-            </div>
-            <div>
+            </Typography>
+            <Typography>
               סכום ביניים
-            </div>
-            <div>
+            </Typography>
+            <Typography>
               {`${allsum()}.00 ₪ `}
-            </div>
+            </Typography>
           
           
           <div style={{gridRow: '3' , 

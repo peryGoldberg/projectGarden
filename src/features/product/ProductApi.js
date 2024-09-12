@@ -1,8 +1,7 @@
 import axios from 'axios';
-let baseUrl="http://localhost:8000/api/"
+let baseUrl="https://projectnode-feg7.onrender.com/api/"
 
 
-//https://projectnode-feg7.onrender.com
 export const getAllProduct = (page, perPage,search) => {
     return axios.get(`${baseUrl}product/?page=${page}&perPage=${perPage}&search=${search}`)
 }

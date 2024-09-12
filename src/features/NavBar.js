@@ -5,18 +5,15 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { Link, useNavigate, NavLink, json } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
-import { Card, CardHeader, CardContent, Avatar } from '@mui/material';
+import { Card, CardHeader,  Avatar } from '@mui/material';
 import { userOut } from './user/UserSlice.js'
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 export default function NavBar() {
   let disPatch = useDispatch()
@@ -79,9 +76,8 @@ export default function NavBar() {
           {!typeUser && <Link to="SignOn" >  <Button sx={{color:'#fff'}}>הרשמה</Button></Link>}
           
           <Link to="list" >  <Button sx={{color:'#fff'}}>כל העציצים</Button></Link>
-          {/* <Link to="" >  <Button color="inherit"><img sx={{width:'2%'}} src="https://rubybot.co.il/_next/image?url=https%3A%2F%2Fapi.rubybot.co.il%2Fgenerated_images%2FFQddAPqQxqklizmanxARHKeXczvOjOotVxIwAVnzSuPtiubyVPiJoGSjmHvWtHrL.jpeg&w=640&q=75"/></Button></Link> */}
+         
           <Link to="" >  <Button color="inherit"><img style={{width:'70px'}} src="https://rubybot.co.il/_next/image?url=https%3A%2F%2Fapi.rubybot.co.il%2Fgenerated_images%2FFQddAPqQxqklizmanxARHKeXczvOjOotVxIwAVnzSuPtiubyVPiJoGSjmHvWtHrL.jpeg&w=640&q=75"/></Button></Link>
-          {/* <Link to="" >  <Button color="inherit"><img style={{width:'70px'}} src="https://rubybot.co.il/_next/image?url=https%3A%2F%2Fapi.rubybot.co.il%2Fgenerated_images%2FVbnWkkWIEbKjAxwlgufmpcyeEOumtucKtxXtVIpNTJGxQqQKJJZMsJgIwRJJePUO.jpeg&w=640&q=75"/></Button></Link> */}
 
 
 

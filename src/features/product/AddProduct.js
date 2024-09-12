@@ -10,7 +10,6 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as React from 'react';
 import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import './AddProduct.css';
 
@@ -64,7 +63,7 @@ const AddProduct = () => {
     <div  className="add-product">
         <form onSubmit={handleSubmit(onSubmit)} style={{  direction: "rtl" }} >
             <div id="productName">
-                <TextField htmlFor="productName" id="outlined-basic" label="שם העציץ*"  variant="outlined"
+                <TextField htmlFor="productName" id="outlined-basic" label="שם העציץ*"  variant="outlined" color='secondary'
                     type="text" style={{margin:'1%', width: '30%', borderColor: 'pink' }} InputLabelProps={{ style: { textAlign: 'right' } }}
                    
                     {...register("productName")}
@@ -72,7 +71,7 @@ const AddProduct = () => {
                 {errors.productName && <Alert style={{ margin: "0% 35%" }} severity="error">{errors.productName.message}</Alert>}
             </div>
             <div id="description">
-                <TextField htmlFor="description"  id="outlined-basic" multiline rows={3} label="תאור"
+                <TextField htmlFor="description"  id="outlined-basic" multiline rows={3} label="תאור" color='secondary'
 
                     variant="outlined"
                     type="text" style={{margin:'1%',width: '30%', borderColor: 'pink' }} InputLabelProps={{ style: { textAlign: 'right' } }}
@@ -83,10 +82,9 @@ const AddProduct = () => {
             </div>
 
             <div  id="price">
-                <TextField htmlFor="price" id="outlined-basic" label="מחיר*"
-
+                <TextField htmlFor="price" id="outlined-basic" label="מחיר*" color='secondary'
                     variant="outlined"
-                    type="number" style={{margin:'1%', width: '30%', borderColor: 'pink' }} InputLabelProps={{ style: { textAlign: 'right' } }}
+                    type="number" style={{margin:'1%', width: '30%' }} InputLabelProps={{ style: { textAlign: 'right' } }}
                   
                     {...register("price")}
                 />
@@ -94,7 +92,7 @@ const AddProduct = () => {
             </div>
 
             <div id="imgUrl">
-                <TextField htmlFor="imgUrl" id="outlined-basic" label="קישור לתמונה*"
+                <TextField htmlFor="imgUrl" id="outlined-basic" label="קישור לתמונה*" color='secondary'
 
                     variant="outlined"
                     type="text" style={{margin:'1%', width: '30%', borderColor: 'pink' }} InputLabelProps={{ style: { textAlign: 'right' } }}
