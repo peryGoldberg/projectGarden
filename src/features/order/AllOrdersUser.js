@@ -1,23 +1,7 @@
-import ProductItem from '../product/ProductItem.js';
 import { useEffect, useState } from 'react';
-import { getAllProduct, getNumOfAllPages, getNumPages } from '../product/ProductApi';
-import { Link, Outlet } from "react-router-dom";
 import * as React from 'react';
-import Pagination from '@mui/material/Pagination';
-import PaginationItem from '@mui/material/PaginationItem';
-import Stack from '@mui/material/Stack';
 import { useSelector } from 'react-redux';
-import { Button } from '@mui/base';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
-import { TextField, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { getAllorders } from './OrderApi.js';
 const AllOrdersUser = () => {
 

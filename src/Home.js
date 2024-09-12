@@ -1,5 +1,5 @@
 
-import { border } from "@mui/system";
+// import { border } from "@mui/system";
 import "./Home.css";
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Login from './features/user/LogIn.js'
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import Karusale from './Karusale.js';
+// import Karusale from './Karusale.js';
 import  { useState, useEffect } from 'react';
 
 const Home = () => {

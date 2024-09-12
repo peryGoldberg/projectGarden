@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ProductList from './features/product/ProductList.js'
 import NavBar from './features/NavBar';
@@ -12,7 +11,6 @@ import SignOn from './features/user/SignOn.js'
 import {useEffect} from 'react'
 import { useDispatch } from 'react-redux';
 import {userIn} from './features/user/UserSlice.js'
-import AllOrders from './features/order/AllOrders.js'
 import Home from './Home.js';
 import UpdateItem from './features/product/UpdateItem.js'
 import '@fontsource/roboto/400.css';
@@ -20,24 +18,19 @@ import '@fontsource/rubik/400.css';
 import { createTheme } from '@mui/material/styles';
 import { Protected } from './Protected.js';
 import { useSelector } from 'react-redux';
-import AllOrdersUser from './features/order/AllOrdersUser';
 function App() {
   let user = useSelector(us => us.currentUser.currentUser)
-  const theme = createTheme({
-    palette: {
-      primary: {
-        light: '#9c27b0',
-        main: '#9c27b0',
-        dark: '#9c27b0',
-        contrastText: '#2B3944',
-      }
-    }
-});
-  // const theme = createTheme({
-  //   typography: {
-  //     fontFamily: 'Raleway, Arial',
-  //   }
-  // });
+//   const theme = createTheme({
+//     palette: {
+//       primary: {
+//         light: '#9c27b0',
+//         main: '#9c27b0',
+//         dark: '#9c27b0',
+//         contrastText: '#2B3944',
+//       }
+//     }
+// });
+
   let dispatch=useDispatch()
   useEffect(() => {
     let u = localStorage.getItem("myUser");

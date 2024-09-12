@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
-import { Card, CardHeader,  Avatar } from '@mui/material';
+import {  CardHeader,  Avatar } from '@mui/material';
 import { userOut } from './user/UserSlice.js'
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -68,10 +68,10 @@ export default function NavBar() {
           </Typography>
           
           {typeUser && <Button color='secondary' style={{ backgroundColor: "#fff" }} onClick={myUserOut}>התנתקות</Button>}
-          {typeUser && typeUser=="USER"&&<Link to="">  <Button sx={{color:'#fff'}}>ההזמנות שלי</Button></Link>}
+          {typeUser && typeUser==="USER"&&<Link to="">  <Button sx={{color:'#fff'}}>ההזמנות שלי</Button></Link>}
          
-          {typeUser && typeUser == "ADMIN" && <Link to="AllOrders" >  <Button sx={{color:'#fff'}}>כל הזמנות </Button></Link>}
-          {typeUser && typeUser == "ADMIN" && <Link to="AddProduct" >  <Button sx={{color:'#fff'}}>הוספה</Button></Link>}
+          {typeUser && typeUser === "ADMIN" && <Link to="AllOrders" >  <Button sx={{color:'#fff'}}>כל הזמנות </Button></Link>}
+          {typeUser && typeUser === "ADMIN" && <Link to="AddProduct" >  <Button sx={{color:'#fff'}}>הוספה</Button></Link>}
           {!typeUser && <Link to="LogIn" ><Button sx={{color:'#fff'}}>התחברות</Button> </Link>}
           {!typeUser && <Link to="SignOn" >  <Button sx={{color:'#fff'}}>הרשמה</Button></Link>}
           
